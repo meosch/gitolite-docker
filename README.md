@@ -45,3 +45,7 @@ Then you should be able to clone the gitolite-admin repository by running: `git 
 Run the command: `docker run --name=gitolite-test-runner gitolite-docker:latest "YOUR QUOTED COMMAND"` where _"YOUR QUOTED COMMAND"_ is the command to run... Between quotes !
 
 Example: `docker run --name=gitolite-test-runner gitolite-docker:latest "cd gitolite && GITOLITE_TEST=y prove"` which will run all gitolite tests.
+
+### Todo
+
+* Need a way that we can use gitolite from other containers. How do we setup the ssh keys to make this possible?  
