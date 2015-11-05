@@ -59,3 +59,5 @@ RUN bin/gitolite-setup.sh
 
 # start needed services
 ENTRYPOINT ["run"]
+
+CMD 'while true; do sleep 600; done'
