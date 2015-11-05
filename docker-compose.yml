@@ -1,0 +1,23 @@
+### See the line below that start with ### for changes needed when creating a new container with this file. - FJH
+
+gitolitedocker:
+  hostname: gitolitedocker
+  image: gitolite-docker:latest
+  expose:
+#    - "80" # Left in case we add gitweb later to this container
+    - "22"
+## Commenting out ports number as we do not use them. Left them here in case we want to use them later or turn them back on.
+## We can have every add on using the same host computer's port numbers.
+## Watching Interpolate environment variables #1765 to see if later we can configure these via environmental variables if we still need / want them.
+## https://github.com/docker/compose/pull/1765
+  ports: 
+#    - "9080:80"
+    - "2222:22"
+  environment:
+### Change the subdomain (xxxxx.docker) to give this container its own address.
+    - VIRTUAL_HOST=gitolite.docker
+  volumes:
+    # Repositories
+     - "~/docker/git/repositories:/home/git/repositories"
+    # Used to transfer files from container to host as needed
+     - "/tmp/gitolite:/tmp/gitolite"
