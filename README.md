@@ -1,5 +1,10 @@
+## This project has been abondoned.
+I have switched to running gitolite on the Docker host computer for the time being. I am not sure if I will do anything with this project in the future.
+
 Gitolite Docker
 ===============
+
+
 Gitolite container
 Install
 -------
